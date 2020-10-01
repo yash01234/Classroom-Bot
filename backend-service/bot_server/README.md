@@ -3,14 +3,35 @@
 ## Requirements
 
 1. `python --version` <br/>
-   Python 3.7.3
+   Python 3.7.3 or greater
 2. `mysql --version` <br/>
    [mysql Ver 14.14 Distrib 5.7.31](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/), for Linux (x86_64) using  EditLine wrapper
 3. [Django and code base requirements](./requirements.txt)
 4. Linter, which adheres to PEP8 standards:
    `pycodestyle==2.6.0`
 5. We have used PyCharm and VSCode as Editors with pycodestyle as linter in Python Environment
-Note: We recommend using virtualenv
+6. We use a `.pyenv` file if you use [PyEnv] to manage multiple python environments
+
+
+## Setting Up
+
+### MySQL or MySQL Client
+
+This project requires a MySQL client driver to work. You can install this by either installing mysql in full, or just the mysql client. Follow the instructions on the official [MySQL Documentation site](https://dev.mysql.com/doc/refman/8.0/en/installing.html).
+
+**We reccomend installing just the `mysql-client` and not the entire database!**
+
+### Python Dependencies
+
+First, create a virtual environment as a `./venv` directory
+```
+python -m venv ./venv
+```
+
+Then install all dependencies
+```
+./venv/bin/pip install -r requirements.txt
+```
 
 ## Note for a developer
 
