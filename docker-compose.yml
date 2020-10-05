@@ -26,7 +26,7 @@ services:
         dockerfile: 'app.Dockerfile'
     container_name: backend-service
     image: backend-service:tag
-    env_file: backend-service/bot_server/sample.env
+    env_file: backend-service/bot_server/.env
     restart: always
     ports:
       - "8000:8000"
@@ -39,7 +39,7 @@ services:
         dockerfile: 'app.Dockerfile'
     container_name: backend-proxy-service
     image: backend-proxy-service:tag
-    env_file: backend-service/bot_proxy_server/sample.env
+    env_file: backend-service/bot_proxy_server/.env
     restart: always
     ports:
       - "8001:8001"
