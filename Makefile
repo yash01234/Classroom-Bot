@@ -1,4 +1,5 @@
 BACKEND-SERVICE-CONTAINER=backend-service
+BACKEND-PROXY-SERVICE-CONTAINER=backend-proxy-service
 MYSQL-CONTAINER=mysql
 
 BACKEND-TEST-CONTAINER=test-backend
@@ -52,7 +53,6 @@ ui.docker.run.all: ui.docker.build
 ui.docker.down:
 	docker-compose stop ui
 
-
 backend.down:
 	docker-compose stop backend-service
 	docker-compose rm backend-service
@@ -72,6 +72,12 @@ backend.app:
 	docker-compose build
 	docker-compose up -d ${MYSQL-CONTAINER}
 	docker-compose up -d ${BACKEND-SERVICE-CONTAINER}
+
+.PHONY : backend.app
+backend-proxy.app:
+	docker-compose build
+	docker-compose up -d ${MYSQL-CONTAINER}
+	docker-compose up -d ${BACKEND-PROXY-SERVICE-CONTAINER}
 
 .PHONY : restart.backend
 restart.backend:
