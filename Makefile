@@ -30,12 +30,12 @@ ui.local.start:
 	cd ui/classroom-bot-ui && npm start
 
 ui.docker.lint:
-	docker build --file='ui/lint.Dockerfile' ui  --tag=node-lint:local
+	docker build -f ui/lint.Dockerfile ui --tag=node-lint:local
 	docker run -it --name=node-lint node-lint:local
 	docker rm node-lint
 
 ui.docker.build:
-	docker build --file='ui/app.Dockerfile' ui --tag=bot-ui:local
+	docker build -f ui/app.Dockerfile ui --tag=bot-ui:local
 
 ui.docker.run:
 	docker-compose rm -f ui
@@ -110,4 +110,4 @@ clean:
 	- docker rm -f ${BACKEND-PROXY-SERVICE-CONTAINER}
 	- docker rm -f ${BACKEND-TEST-CONTAINER}
 	- docker rm -f ${MYSQL-CONTAINER}
-	- docker network rm ${TEST-NETWORK}
+	- docker network rm ${TEST-NETWORK} 
