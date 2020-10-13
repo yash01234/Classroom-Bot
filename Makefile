@@ -3,7 +3,7 @@ BACKEND-PROXY-SERVICE-CONTAINER=backend-proxy-service
 MYSQL-CONTAINER=mysql
 
 BACKEND-TEST-CONTAINER=test-backend
-TEST-NETWORK=test-network
+TEST-NETWORK=classroom-bot_test
 
 .PHONY : help
 help :
@@ -66,7 +66,7 @@ pause.all:
 
 .PHONY : clean
 clean.all: pause.all
-	- docker-compose rm
+	- docker-compose rm -f
 
 ## LINTERS ##
 
