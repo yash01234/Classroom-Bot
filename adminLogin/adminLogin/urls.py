@@ -20,7 +20,8 @@ from loginapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.login),
     path('login', views.login, name="login"),
     path('register', views.register, name="register"),
-    path('login/adminPage', views.adminPage, name="adminPage"),
+    path('adminPage', views.adminPage, name="adminPage"),
 ]

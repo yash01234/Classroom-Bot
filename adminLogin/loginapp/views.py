@@ -63,4 +63,5 @@ def register(req):
     return render(req, 'register.html')
 
 def adminPage(req):
+    
     return render(req, 'adminPage.html')
