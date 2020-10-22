@@ -3,10 +3,13 @@ language: minimal
 services:
     docker
 
+before_install:
+  pip install pycodestyle --user
+
 jobs:
     include:
       - stage: backend-lint
-        script: make backend.lint
+        script: pycodestyle --max-line-length=200 --exclude=python3.8 .
       - stage: ui-lint
         script: make ui.lint
       - stage: backend-proxy-lint

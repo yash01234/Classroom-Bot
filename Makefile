@@ -17,6 +17,27 @@ start.all:
 	docker-compose build
 	docker-compose up -d
 
+.PHONY : bot_server.linter
+server.lint:
+	cd backend-service/bot_server && pwd && pycodestyle --exclude=.pyc .
+
+	
+.PHONY : adminlogin.linter
+adminlogin.linter :
+	cd adminLogin && pycodestyle --exclude=venv .
+	
+.PHONY : project.lint
+project.lint :
+	# pip install pycodestyle --user
+	pycodestyle --max-line-length=200 --exclude=python3.8 .
+
+
+.PHONY : proxy_bot_server.linter
+proxy_bot_server.linter :
+	cd backend-service/proxy_bot_server/
+	pycodestyle --max-line-length=150 --exclude=settings.py
+
+
 ui.install:
 	cd ui/classroom-bot-ui && npm install
 
