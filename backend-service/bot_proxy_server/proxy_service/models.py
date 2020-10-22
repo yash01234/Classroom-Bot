@@ -60,5 +60,5 @@ class CommandRequest(models.Model):
                                                ('completed', 'Completed'),
                                                ('invalid', 'Invalid'),
                                                ('other', 'Other')), auto_created=True)
-    response = models.CharField(max_length=10000, null=True,  blank=True)
+    response = models.CharField(max_length=10000, null=True, blank=True)
     objects = CommandRequestManager()

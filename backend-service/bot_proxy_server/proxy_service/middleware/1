@@ -21,4 +21,5 @@ class ValidateTeamIDMiddleware(BaseMiddleWare):
                             "status": 1,
                             "message": "Missing team_id in the request from the slack.",
                             "data": []
-                            })
+                           	}
+			   )
