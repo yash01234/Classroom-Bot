@@ -9,7 +9,7 @@ before_install:
 jobs:
     include:
       - stage: backend-lint
-        script: pycodestyle --max-line-length=200 --exclude=python3.8 .
+        script: cd adminLogin/adminLogin && pycodestyle --max-line-length=200 --exclude=python3.8 .
       - stage: ui-lint
         script: make ui.lint
       - stage: backend-proxy-lint

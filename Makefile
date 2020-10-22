@@ -28,8 +28,10 @@ adminlogin.linter :
 	
 .PHONY : project.lint
 project.lint :
-	# pip install pycodestyle --user
-	pycodestyle --max-line-length=200 --exclude=python3.8 .
+	cd adminLogin/adminLogin && pycodestyle --max-line-length=200 --exclude=python3.8 .
+	
+	
+	
 
 
 .PHONY : proxy_bot_server.linter
