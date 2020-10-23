@@ -23,7 +23,6 @@ ui.install:
 ui.build: ui.install
 	cd ui/classroom-bot-ui && npm run-script build
 
-<<<<<<< HEAD
 ui.local.test:
 	cd ui/classroom-bot-ui && npm test
 
@@ -32,9 +31,7 @@ ui.local.start:
 
 
 ui.docker.build:
-=======
 ui.docker.build: ui.build
->>>>>>> master
 	docker build -f ui/app.Dockerfile ui --tag=bot-ui:local
 
 ui.docker.run: ui.build ui.docker.build 
@@ -45,7 +42,6 @@ ui.docker.test:
 	docker run -it --name=node-test node-test:local
 	docker rm node-test
 
-<<<<<<< HEAD
 ui.docker.run.all: ui.docker.build
 	docker-compose rm -f ui
 	docker-compose up ui
@@ -64,9 +60,7 @@ project.lint :
 	pip install pycodestyle --user
 	pycodestyle --max-line-length=200 --exclude=python3.8 .
 
-=======
 ui.app: ui.docker.run
->>>>>>> master
 
 .PHONY : backend.app
 backend.app:
@@ -126,7 +120,6 @@ build.run.backend.test:
 	 -p 8002:8002 --env-file backend-service/bot_server/.env ${BACKEND-TEST-CONTAINER}
 
 .PHONY : backend.test
-<<<<<<< HEAD
 backend.test: create-network run-mysql build-run-backend-test
 
 .PHONY : clean
@@ -136,6 +129,4 @@ clean:
 	- docker rm -f ${BACKEND-TEST-CONTAINER}
 	- docker rm -f ${MYSQL-CONTAINER}
 	- docker network rm ${TEST-NETWORK} 
-=======
 backend.test: run.mysql build.run.backend.test
->>>>>>> master
