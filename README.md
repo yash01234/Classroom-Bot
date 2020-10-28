@@ -36,7 +36,7 @@ grades, assignments and other classroom resources from slack?
 
 The classroom bot is the bot that can satisfy all of the above **what ifs**.
 
-## Better Than...
+## Better Than... (Phase 3 Testing Plan)
 
 Setting up Classroom bot is a vital part of its success. We have created a sample evaluation list to see if it is easier than "X" to setup than anything else. See [our outline](./docs/testing-the-idea.md).
 
