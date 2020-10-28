@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/github/issues-raw/yash01234/Classroom-Bot" alt="Issues">
 <img src="https://img.shields.io/github/issues-closed-raw/yash01234/Classroom-Bot?style=plastic" alt="Closed Issues">
 <img src="https://img.shields.io/github/repo-size/yash01234/Classroom-Bot" alt="Light Weight">
-<img src="./backend-service/bot_server/coverage.svg" alt="Test Coverage" />
+<img src="./backend-service/bot_server/coverage/coverage.svg" alt="Test Coverage" />
 
 [![Slack Classroom-Bot](https://img.youtube.com/vi/aldS90l3hYY/0.jpg)](https://www.youtube.com/watch?v=aldS90l3hYY)
  
