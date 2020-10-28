@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from loginapp import views
 
-
+# Paths for directing user requests...
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.login),

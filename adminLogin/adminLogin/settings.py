@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'adminLogin.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
+# Database information
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
