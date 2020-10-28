@@ -16,14 +16,13 @@ student1_data = {'workspace_id': W_ID, 'email_id': 'email@gmail.com',
                  'name': 'First Last', 'student_unity_id': 'unityid'}
 student2_data = {'workspace_id': W_ID, 'email_id': 'email2@gmail.com',
                  'name': 'First2 Last2', 'student_unity_id': 'unityid2'}
-group_data = {
-                'workspace_id': W_ID,
-                'group_number': 18,
-                'participants': [
-                    {'email_id': 'email@gmail.com', 'student_unity_id': 'unityid', 'name': 'First Last'},
-                    {'email_id': 'email2@gmail.com', 'student_unity_id': 'unityid2', 'name': 'First2 Last2'}
-                ]
-            }
+group_data = {'workspace_id': W_ID,
+              'group_number': 18,
+              'participants': [
+                  {'email_id': 'email@gmail.com', 'student_unity_id': 'unityid', 'name': 'First Last'},
+                  {'email_id': 'email2@gmail.com', 'student_unity_id': 'unityid2', 'name': 'First2 Last2'}
+              ]}
+
 assignment_data = {'workspace_id': W_ID, 'assignment_name': 'HW1',
                    'due_by': '2020-02-01T10:10', 'homework_url': 'https://hw1.url.com',
                    'created_by': 'abcd'}

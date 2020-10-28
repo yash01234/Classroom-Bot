@@ -23,6 +23,14 @@ ui.install:
 ui.build: ui.install
 	cd ui/classroom-bot-ui && npm run-script build
 
+ui.local.test:
+	cd ui/classroom-bot-ui && npm test
+
+ui.local.start:
+	cd ui/classroom-bot-ui && npm start
+
+
+ui.docker.build:
 ui.docker.build: ui.build
 	docker build -f ui/app.Dockerfile ui --tag=bot-ui:local
 
@@ -33,6 +41,24 @@ ui.docker.test:
 	docker build --file='ui/test.Dockerfile' ui  --tag=node-test:local
 	docker run -it --name=node-test node-test:local
 	docker rm node-test
+
+ui.docker.run.all: ui.docker.build
+	docker-compose rm -f ui
+	docker-compose up ui
+
+ui.docker.down:
+	docker-compose stop ui
+
+backend.down:
+	docker-compose stop backend-service
+	docker-compose rm backend-service
+
+
+
+.PHONY : project.lint
+project.lint :
+	pip install pycodestyle --user
+	pycodestyle --max-line-length=200 --exclude=python3.8 .
 
 ui.app: ui.docker.run
 
@@ -96,4 +122,13 @@ build.run.backend.test:
 	  
 
 .PHONY : backend.test
+backend.test: create-network run-mysql build-run-backend-test
+
+.PHONY : clean
+clean:
+	- docker rm -f ${BACKEND-SERVICE-CONTAINER}
+	- docker rm -f ${BACKEND-PROXY-SERVICE-CONTAINER}
+	- docker rm -f ${BACKEND-TEST-CONTAINER}
+	- docker rm -f ${MYSQL-CONTAINER}
+	- docker network rm ${TEST-NETWORK} 
 backend.test: run.mysql build.run.backend.test

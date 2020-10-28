@@ -1,3 +1,4 @@
+pycodestyle==2.6.0
 asgiref==3.2.10
 coverage==5.3
 coverage-badge==1.0.1
