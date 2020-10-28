@@ -8,6 +8,7 @@ venv/
 ven.bak/
 .vscode
 backend-service/bot_server/.idea/
+backend-service/bot_server/.coverage
 backend-service/bot_server/doc/source/_build/
 backend-service/bot_server/doc/source/_static/
 backend-service/bot_server/doc/source/_templates/

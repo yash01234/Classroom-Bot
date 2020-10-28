@@ -91,7 +91,9 @@ ui.lint:
 build.run.backend.test:
 	docker build -t ${BACKEND-TEST-CONTAINER} -f backend-service/test.Dockerfile ./backend-service/
 	docker run --rm --name ${BACKEND-TEST-CONTAINER} --network ${TEST-NETWORK} \
-	 -p 8002:8002 --env-file backend-service/bot_server/.env ${BACKEND-TEST-CONTAINER}
+	 -v ${PWD}/backend-service/bot_server/coverage:/bot_server/coverage \
+	 -p 8002:8002 --env-file backend-service/bot_server/.env ${BACKEND-TEST-CONTAINER} 
+	  
 
 .PHONY : backend.test
 backend.test: run.mysql build.run.backend.test
