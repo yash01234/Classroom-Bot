@@ -18,6 +18,10 @@
 </center>
 <hr>
 
+### (Phase 3 Testing Plan)
+
+Setting up Classroom bot is a vital part of its success. We have created a sample evaluation list to see if it is easier than "X" to setup than anything else. See [our outline](./docs/testing-the-idea.md).
+
 ### Why a developer cares
 
 1. Quantify the time taken by a user to scroll through all the resources vs using the Classroom-Bot. Contact the owner for more information on the prototype of the website that can make your as well as participants' task easy to do lab experiments.
@@ -35,10 +39,6 @@ A lot of classrooms use slack as mode of communication.
 grades, assignments and other classroom resources from slack?
 
 The classroom bot is the bot that can satisfy all of the above **what ifs**.
-
-## Better Than... (Phase 3 Testing Plan)
-
-Setting up Classroom bot is a vital part of its success. We have created a sample evaluation list to see if it is easier than "X" to setup than anything else. See [our outline](./docs/testing-the-idea.md).
 
 ## Developing and Contributing
 
