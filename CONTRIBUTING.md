@@ -2,7 +2,7 @@
 
 # Contributing to Classroom Bot
 
-Thank you so much for taking an interest in contributing! We are lookng forward to contributions that will enable lesser human intervention!! There are many ways to contribute to this porject!
+Thank you so much for taking an interest in contributing! We are looking forward to contributions that will enable lesser human intervention!! There are many ways to contribute to this porject!
 
 #### Table Of Contents
 [Code of Conduct](CODE_OF_CONDUCT.md)
